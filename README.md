@@ -4,13 +4,13 @@ Open Sound Control (OSC) messaging via UDP/TCP and device management for ESP8266
 
 ## Application
 
-For wireless control of multimedia systems using NodeMCU-based embedded devices. OSC messages can be sent via UDP implement low-latency wireless controllers (e.g. for musical instruments), or sent via TCP with guaranteed arrival where latency is less critical.
+For wireless control of multimedia systems using NodeMCU-based embedded devices. OSC messages can be sent via UDP implement low-latency wireless controllers (e.g. for musical instruments), or sent via TCP with guaranteed arrival where latency is less critical. 
 
 *Note: these IoT devices do not encrypt credentials, as they are intended for controlling multimedia systems on local networks that don't require internet connection or otherwise don't provide access to sensitive data or systems.*
 
-The Arduino example `gate.ino` demonstrates basic NodeOSC device configuration and sends an OSC message to a OSC server when the state of a digital pin changes. Optionally, the pin's state can be requested by an OSC server.
+The Arduino example `gate.ino` demonstrates basic NodeOSC device configuration and sends an OSC message when the state of a digital pin changes. Optionally, the pin's state can be requested.
 
-The Max/MSP example `test.maxpat` acts as an OSC server/client, and uses UDP broadcast to obtain IP addresses and device identifiers for any NodeMCU devices listening on the port. 
+The Max/MSP example `test.maxpat` acts as an OSC server/client, and uses UDP broadcast to obtain IP addresses and device identifiers for any NodeOSC devices listening on the port. 
 
 The example `multi.maxpat` acts as an OSC server/client and demonstrates how networks of multiple NodeOSC devices can be managed using JavaScript within Max/MSP. This system automatically populates a dictionary of IP addresses keyed by the device identifiers, meaning addresses don't have to be hard-coded or configured as static or reserved. 
 
